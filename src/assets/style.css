@@ -1,0 +1,1736 @@
+:root {
+  --primary: #2e2e2e;
+  --secondary: #f2b01e;
+  --accent: #1f4e79;
+  --background: #ffffff;
+  --surface: #ededed;
+  --text-primary: #1c1c1c;
+  --text-secondary: #6b6b6b;
+}
+body {
+  background-color: var(--background);
+  overflow-x: hidden;
+}
+/* ================================
+   Top Navbar Component
+================================ */
+
+.company-name {
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Desktop Nav Links */
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: var(--primary);
+  padding-bottom: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--secondary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Lines */
+.line {
+  height: 3px;
+  width: 100%;
+  background-color: var(--secondary);
+  transition: all 0.3s ease;
+}
+
+/* Mobile Links */
+.mobile-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.mobile-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--secondary);
+}
+/* ================================
+   Footer Component CSS
+================================ */
+
+.footer {
+  position: relative;
+}
+
+.footer-brand {
+  font-family: "Cinzel", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
+  color: #d1d1d1;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--secondary);
+}
+
+.footer-social {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.footer-social:hover {
+  background-color: var(--secondary);
+  color: #000;
+  border-color: var(--secondary);
+}
+
+.footer-newsletter {
+  display: flex;
+  background-color: #1f1f1f;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.footer-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.7rem 0.9rem;
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.footer-input::placeholder {
+  color: #9a9a9a;
+}
+
+.footer-btn {
+  background-color: var(--secondary);
+  padding: 0 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.footer-btn:hover {
+  background-color: #d99a12;
+}
+
+.footer-bottom {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #2e2e2e;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+}
+/* ================================
+   Hero Component CSS
+================================ */
+
+.hero-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Slider */
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  animation: slideBg 30s infinite;
+}
+
+.hero-slide {
+  min-width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Sliding animation */
+@keyframes slideBg {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  45% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  95% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+/* Text Styles */
+.hero-heading-line {
+  background-color: var(--secondary);
+  color: var(--background);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.4rem 0.8rem;
+  display: inline-block;
+  width: fit-content;
+}
+
+.hero-subtext {
+  background-color: var(--secondary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0.7rem 1rem;
+  display: inline-block;
+  max-width: 90%;
+}
+
+/* Primary CTA — Strong Action */
+.hero-btn-primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 0.75rem 1.8rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: #173e62;
+}
+
+/* Secondary CTA — Quiet / Supporting */
+.hero-btn-secondary {
+  background-color: #ffffff;
+  color: var(--accent);
+  padding: 0.75rem 1.8rem;
+  font-weight: 600;
+  border: 2px solid #ffffff;
+  transition: all 0.3s ease;
+}
+
+.hero-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* ================================
+   Text Reveal Animation (Global)
+================================ */
+
+.animate-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealText 0.8s ease forwards;
+}
+
+.animate-reveal.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.animate-reveal.delay-2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes revealText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================================
+   About Component CSS
+================================ */
+
+/* ================================
+   About Component CSS
+================================ */
+
+.about-section {
+  background-color: var(--primary);
+}
+
+.about-grid {
+  display: grid;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.about-content {
+  width: 100%;
+}
+
+/* ================================
+   Shared Section Typography
+   (Reusable Across Components)
+================================ */
+
+.section-heading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: var(--background);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-subtext {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--background);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--background);
+  margin-bottom: 1.2rem;
+}
+
+/* Lottie */
+/* .about-lottie {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+} */
+/* ================================
+   Services Component CSS
+================================ */
+
+.services-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.services-overlay {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Intro Column */
+.services-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.services-heading {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.services-subtext {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+/* Button */
+.services-btn {
+  align-self: flex-start;
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 0.75rem 1.6rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.services-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Services List */
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.services-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.services-item svg {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+  }
+}
+/* ================================
+  (Why Choose Us) component
+================================ */
+
+.apex-section {
+  width: 100%;
+}
+
+/* Grid Layout */
+.apex-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+/* Text Content */
+.apex-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.section-heading2 {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-subheading2 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+}
+
+.section-text2 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  /* max-width: 650px; */
+  line-height: 1.8;
+}
+
+/* Make both columns equal height on large screens */
+@media (min-width: 1024px) {
+  .apex-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
+/* Image Wrapper */
+.apex-image-wrapper {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+/* Image */
+.apex-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ================================
+   Mission Component CSS
+================================ */
+
+.mission-section {
+  width: 100%;
+}
+
+/* Layout */
+.mission-grid {
+  display: grid;
+}
+
+@media (min-width: 1024px) {
+  .mission-grid {
+    grid-template-columns: 1fr 1fr;
+    min-height: 520px;
+  }
+}
+
+/* LEFT SIDE */
+.mission-left {
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+/* Override shared typography for dark bg */
+.mission-heading,
+.mission-subheading,
+.mission-text {
+  color: #ffffff;
+  text-align: start;
+}
+
+/* RIGHT SIDE */
+.mission-right {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Overlay */
+.mission-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.mission-cta,
+.mission-logo {
+  position: relative;
+  z-index: 1;
+}
+
+/* Small floating logo */
+.mission-logo {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 80px;
+  height: auto;
+}
+
+/* Career CTA */
+.mission-cta {
+  text-align: center;
+  color: #ffffff;
+}
+
+.mission-career-text {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.mission-btn {
+  background: var(--accent);
+  color: #ffffff;
+  padding: 0.9rem 1.8rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.mission-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+/* ================================
+   Core Values Component CSS
+================================ */
+
+.core-section {
+  background: var(--primary);
+}
+
+/* Header */
+.core-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.core-heading,
+.core-subheading {
+  color: #ffffff;
+}
+
+/* Grid */
+.core-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .core-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .core-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.core-card {
+  border: 1.5px solid var(--secondary);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* subtle hover effect */
+.core-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* icon */
+.core-icon {
+  color: var(--secondary);
+  margin-bottom: 1.2rem;
+}
+
+/* title */
+.core-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+/* text */
+.core-text {
+  color: #ffffff;
+  opacity: 0.9;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+/* ================================
+   Why Trust Us Component CSS
+================================ */
+
+.trust-section {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.trust-overlay {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* Layout */
+.trust-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .trust-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
+/* Left Content */
+.trust-heading,
+.trust-subheading,
+.trust-text {
+  color: #ffffff;
+}
+
+/* Stats Grid */
+.trust-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card */
+.trust-card {
+  border: 1.5px solid var(--secondary);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.trust-card svg {
+  color: var(--secondary);
+  margin-bottom: 0.75rem;
+}
+
+.trust-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Number */
+.trust-number {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* Label */
+.trust-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+/* ================================
+   Testimonials Section
+================================ */
+
+/* .testimonials-section {
+  padding: 6rem 0;
+} */
+.container {
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  /* padding: 0 1.5rem; */
+}
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+/* Header */
+
+.testimonials-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  color: var(--primary);
+}
+
+/* Card */
+
+.testimonial-card {
+  background: var(--primary);
+  border: 2px solid var(--accent);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Stars */
+
+.testimonial-stars {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+/* Text */
+
+.testimonial-text {
+  color: #ffffff;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* User */
+
+.testimonial-user h4 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.testimonial-user span {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Swiper arrows color */
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--accent);
+}
+
+/* Pagination dots */
+
+.swiper-pagination-bullet-active {
+  background: var(--accent);
+}
+/* ================================
+   FAQ Section
+================================ */
+
+.faq-section {
+  background: var(--primary);
+  color: white;
+}
+
+/* Header */
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Layout */
+
+.faq-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .faq-grid {
+    grid-template-columns: 1.3fr 1fr;
+    align-items: start;
+  }
+}
+
+/* =====================
+   Accordion
+===================== */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq-item.open {
+  border-color: var(--accent);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: left;
+}
+
+.faq-question:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-icon {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.4rem;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+/* =====================
+   Support Card (Right)
+===================== */
+
+.faq-support {
+  position: sticky;
+  top: 100px;
+}
+
+.support-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.support-icon {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.support-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.support-card p {
+  color: #ddd;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* Buttons */
+
+.support-btn.primary {
+  background: var(--accent);
+  color: white;
+  padding: 0.9rem 1.6rem;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.support-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Mobile fix */
+
+@media (max-width: 1024px) {
+  .faq-support {
+    position: relative;
+    top: auto;
+  }
+}
+/* ================================
+   Recent Projects Component CSS
+================================ */
+
+.projects-section {
+  background: var(--primary);
+  color: white;
+}
+
+/* Header */
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* =====================
+   Grid
+===================== */
+
+.projects-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+/* Mobile */
+.projects-grid {
+  grid-template-columns: 1fr;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large screen */
+@media (min-width: 1280px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =====================
+   Card
+===================== */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hover zoom */
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.project-overlay span {
+  background: var(--secondary);
+  color: var(--text-primary);
+  padding: 0.6rem 1.3rem;
+  font-weight: 600;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/* =====================
+   CTA Button
+===================== */
+
+.projects-cta {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.projects-btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.9rem 2rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.projects-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+/* ================================
+   Contact Component CSS
+================================ */
+
+.contact-section {
+  background: white;
+}
+
+/* Header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Layout */
+
+.contact-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+/* =====================
+   Form
+===================== */
+
+.contact-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-form {
+  background: var(--primary);
+  padding: 2.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.9rem;
+  border: none;
+  outline: none;
+  background: white;
+  font-size: 0.95rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Button */
+
+.contact-btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
+.form-status {
+  color: white;
+  margin-top: 0.5rem;
+}
+
+/* =====================
+   Info Card
+===================== */
+
+.contact-info-card {
+  background: var(--primary);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  height: fit-content;
+  align-self: start;
+}
+
+.contact-info-card h3 {
+  margin-bottom: 1.5rem;
+}
+
+.info-block {
+  margin-top: 1.5rem;
+}
+
+.info-block strong {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* =====================
+   Map
+===================== */
+
+.contact-map {
+  margin-top: 4rem;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+/* =============================
+   News & Insights Section
+============================= */
+
+.news-section {
+  background: var(--primary);
+  color: white;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+/* =============================
+   Header
+============================= */
+
+.news-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* =============================
+   Full Width Scroll Area
+============================= */
+
+.news-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Soft fade edges (premium look) */
+.news-wrapper::before,
+.news-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.news-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--primary), transparent);
+}
+
+.news-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--primary), transparent);
+}
+
+/* =============================
+   Moving Track
+============================= */
+
+.news-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: newsScroll 70s linear infinite; /* slow enterprise speed */
+}
+
+/* =============================
+   News Card
+============================= */
+
+.news-item {
+  min-width: 320px;
+  max-width: 420px;
+  background: white;
+  color: var(--primary);
+  padding: 1.8rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-6px);
+}
+
+.news-date {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+}
+
+.news-item h3 {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* =============================
+   Infinite Scroll Animation
+   (Seamless loop)
+============================= */
+
+@keyframes newsScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =============================
+   Mobile
+============================= */
+
+@media (max-width: 768px) {
+  .news-track {
+    animation-duration: 45s; /* slightly faster on mobile */
+  }
+
+  .news-item {
+    min-width: 260px;
+  }
+}
+/* =================================
+   Services Description Component CSS
+================================= */
+
+.services-desc-section {
+  background: var(--primary);
+  color: white;
+}
+
+/* Header */
+
+.services-desc-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Grid */
+
+.services-desc-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .services-desc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-desc-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ======================
+   V SHAPE CARD
+====================== */
+
+.service-desc-card {
+  background: var(--primary);
+  border: 2px solid var(--secondary);
+  transition: 0.3s ease;
+  overflow: hidden;
+
+  /* V shape / trapezoid */
+  clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+}
+
+.service-desc-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+
+.service-desc-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.service-desc-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content */
+
+.service-desc-content {
+  padding: 2rem 1.6rem 2.5rem;
+  text-align: center;
+}
+
+.service-desc-content h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1.3rem;
+}
+
+.service-desc-content p {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Icon */
+
+.service-icon {
+  color: var(--secondary);
+}
+
+/* ======================
+   CTA
+====================== */
+
+.services-desc-cta {
+  margin-top: 5rem;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-desc-cta p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.services-desc-btn {
+  background: var(--secondary);
+  color: var(--text-primary);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.services-desc-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* ================================
+   Page Hero Component CSS
+================================ */
+
+.page-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+/* Optional dark overlay for readability */
+.page-hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Step heading */
+
+.page-hero-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+/* Each line */
+
+.page-hero-heading span {
+  display: inline-block;
+  background: var(--secondary);
+  color: var(--text-primary);
+  padding: 0.4rem 1rem;
+  width: fit-content;
+}
+
+/* Step effect */
+.page-hero-heading span:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.page-hero-heading span:nth-child(3) {
+  margin-left: 4rem;
+}
+
+/* ================================
+   Services Page CSS
+================================ */
+
+/* Intro Section */
+
+/* .services-intro-content {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+/* Actions */
+
+.services-intro-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Primary button */
+
+.services-intro-btn {
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.services-intro-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* Scroll link */
+
+.services-scroll-link {
+  color: var(--primary);
+  font-weight: 600;
+}
+/* ================================
+   Service Showcase Component CSS
+================================ */
+
+.service-showcase {
+  background: var(--primary);
+  color: white;
+}
+
+/* Header */
+
+.service-showcase-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Service blocks */
+
+.service-showcase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.service-block {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 3rem;
+}
+
+/* Title */
+
+.service-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* yellow underline accent */
+
+.service-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--secondary);
+  margin-top: 8px;
+}
+
+/* Text */
+
+.service-text {
+  max-width: 800px;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #eee;
+}
+
+/* Images grid */
+
+.service-images {
+  display: grid;
+  gap: 1.2rem;
+}
+
+@media (min-width: 640px) {
+  .service-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-images {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Image */
+
+.service-image-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid var(--secondary);
+}
+
+.service-image-wrapper img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.service-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+/* ================================
+   How We Work Component CSS
+================================ */
+
+.how-section {
+  background: white;
+}
+
+/* Header */
+
+.how-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+/* Grid */
+
+.how-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .how-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .how-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Card */
+
+.how-card {
+  position: relative;
+  background: white;
+  border: 2px solid var(--secondary);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Step number */
+
+.how-number {
+  position: absolute;
+  top: -14px;
+  left: 20px;
+  background: var(--secondary);
+  color: var(--text-primary);
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+/* Icon */
+
+.how-icon {
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+/* Text */
+
+.how-card h3 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  color: var(--text-primary);
+}
+
+.how-card p {
+  color: var(--text-primary);
+  line-height: 1.6;
+}

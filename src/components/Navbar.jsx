@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const portfolioItems = [
-  { name: "Kitchen Remodeling", path: "/portfolio#kitchen" },
-  { name: "Basement Remodeling", path: "/portfolio#basement" },
-  { name: "Deck Construction", path: "/portfolio#deck" },
-  { name: "General Construction", path: "/portfolio#general" },
-  { name: "New Home Construction", path: "/portfolio#new-home" },
+  { name: "Kitchen Remodeling", path: "/#kitchen" },
+  { name: "Basement Remodeling", path: "/#basement" },
+  { name: "Deck Construction", path: "/#deck" },
+  { name: "General Construction", path: "/#general" },
+  { name: "New Home Construction", path: "/#new-home" },
   // "Outdoor Living Spaces",
   // "Flooring Installations",
   // "Patio Installations",
@@ -15,13 +15,12 @@ const portfolioItems = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [portfolioOpen, setPortfolioOpen] = useState(false);
-  const navigate = useNavigate();
-
+  // const navigate = useNavigate();
   return (
-    <nav className="bg-[var(--background)] fixed top-0 left-0 w-full z-5000 shadow-sm">
+    <nav className="bg-[var(--surface)] fixed top-0 left-0 w-full z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Brand */}
-        <a href="#" className="company-name text-[var(--primary)]">
+        <a href="/" className="company-name text-[var(--primary)]">
           Apexconstruct
         </a>
 
@@ -33,7 +32,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="about" className="nav-link">
+            <a href="/about" className="nav-link">
               About
             </a>
           </li>
@@ -46,10 +45,7 @@ export default function Navbar() {
           {/* Portfolio Dropdown */}
           <li className="relative">
             <button
-              onClick={() => {
-                setPortfolioOpen(!portfolioOpen);
-                navigate("/portfolio");
-              }}
+              onClick={() => setPortfolioOpen(!portfolioOpen)}
               className="nav-link flex items-center gap-1"
             >
               Portfolio
@@ -74,15 +70,13 @@ export default function Navbar() {
               <ul className="absolute top-full left-0 mt-3 w-64 bg-white shadow-lg rounded-md py-3">
                 {portfolioItems.map((item, index) => (
                   <li key={index}>
-                    <button
-                      onClick={() => {
-                        navigate(item.path); // go to section
-                        setPortfolioOpen(false); // close dropdown
-                      }}
-                      className="block w-full text-left px-5 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)]"
+                    <a
+                      href="#"
+                      className="block px-5 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)]"
+                      onClick={() => setPortfolioOpen(false)}
                     >
                       {item.name}
-                    </button>
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -148,10 +142,7 @@ export default function Navbar() {
               {/* Mobile Portfolio */}
               <li>
                 <button
-                  onClick={() => {
-                    setPortfolioOpen(!portfolioOpen);
-                    navigate("/portfolio");
-                  }}
+                  onClick={() => setPortfolioOpen(!portfolioOpen)}
                   className="mobile-link w-full text-left flex items-center justify-between"
                 >
                   Portfolio
@@ -173,18 +164,15 @@ export default function Navbar() {
                 </button>
 
                 {portfolioOpen && (
-                  <ul className="absolute top-full left-0 mt-3 w-64 bg-white shadow-lg rounded-md py-3">
+                  <ul className="mt-4 ml-4 space-y-3">
                     {portfolioItems.map((item, index) => (
                       <li key={index}>
-                        <button
-                          onClick={() => {
-                            navigate(item.path); // go to section
-                            setPortfolioOpen(false); // close dropdown
-                          }}
-                          className="block w-full text-left px-5 py-2 text-sm text-[var(--text-primary)] hover:bg-[var(--surface)]"
+                        <a
+                          href="#"
+                          className="text-sm opacity-90 hover:underline decoration-[var(--secondary)]"
                         >
                           {item.name}
-                        </button>
+                        </a>
                       </li>
                     ))}
                   </ul>

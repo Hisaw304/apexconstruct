@@ -36,7 +36,7 @@ export default function Services() {
                 craftsmanship, and reliable execution from start to finish.
               </p>
 
-              <a href="#" className="services-btn">
+              <a href="/services" className="services-btn">
                 Learn More
               </a>
             </div>

@@ -143,7 +143,7 @@ export default function ServicesDescription() {
             structural planning, and specialized construction solutions.
           </p>
 
-          <a href="#contact" className="services-desc-btn">
+          <a href="/contact" className="services-desc-btn">
             Get a Quote
           </a>
         </div>

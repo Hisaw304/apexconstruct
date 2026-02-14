@@ -29,7 +29,7 @@ export default function About() {
               committed to quality materials, smart planning, and construction
               practices that stand the test of time.
             </p>
-            <a href="#" className="services-btn">
+            <a href="/about" className="services-btn">
               Learn More
             </a>
           </div>

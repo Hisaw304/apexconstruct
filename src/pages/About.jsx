@@ -37,7 +37,7 @@ const About = () => {
 
             {/* CTA */}
             <div className="services-intro-actions">
-              <a href="#services" className="services-intro-btn">
+              <a href="/services" className="services-intro-btn">
                 Explore Our Services
               </a>
 

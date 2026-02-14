@@ -31,7 +31,9 @@ export default function RecentProjects() {
             <div key={index} className="project-card">
               <img src={img} alt={`Project ${index + 1}`} />
               <div className="project-overlay">
-                <span>View Project</span>
+                <a href="portfolio">
+                  <span>View Project</span>
+                </a>
               </div>
             </div>
           ))}

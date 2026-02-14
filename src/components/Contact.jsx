@@ -66,7 +66,7 @@ export default function Contact() {
 
         <div className="contact-grid">
           {/* FORM SIDE */}
-          <div className="contact-form-wrapper">
+          <div className="contact-form-wrapper" id="contact">
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-row">
                 <input

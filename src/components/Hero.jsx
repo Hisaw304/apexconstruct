@@ -34,10 +34,10 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-4 pt-4 animate-reveal delay-2">
-            <a href="#" className="hero-btn-primary">
+            <a href="#contact" className="hero-btn-primary">
               Get a Quote
             </a>
-            <a href="#" className="hero-btn-secondary">
+            <a href="/portfolio" className="hero-btn-secondary">
               View Portfolio
             </a>
           </div>

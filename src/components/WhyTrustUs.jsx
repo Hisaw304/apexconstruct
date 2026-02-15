@@ -37,7 +37,7 @@ const stats = [
   },
   {
     icon: Building2,
-    number: 920,
+    number: 1920,
     label: "Projects Completed",
     suffix: "+",
   },

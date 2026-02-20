@@ -33,7 +33,7 @@ export default async function handler(req, res) {
 
     await transporter.sendMail({
       from: `"Apexconstruct Website" <${process.env.EMAIL_USER}>`,
-      to: "info@apexconstruct.com",
+      to: "leroysmith@apexconstruct.org",
       subject: "New Contact Form Submission",
       html: `
         <h2>New Contact Request</h2>

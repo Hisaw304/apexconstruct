@@ -172,7 +172,7 @@ export default function Contact() {
 
             <div className="info-block">
               <strong>Email</strong>
-              <p>info@apexconstruct.com</p>
+              <p>leroysmith@apexconstruct.com</p>
             </div>
 
             <div className="info-block">

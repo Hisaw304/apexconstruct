@@ -119,7 +119,7 @@ export default function Footer() {
                 <Phone size={16} /> <span>(555) 123-4567</span>
               </div>
               <div className="flex items-center gap-3">
-                <Mail size={16} /> <span>info@apexconstruct.com</span>
+                <Mail size={16} /> <span>leroysmith@apexconstruct.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={16} />{" "}

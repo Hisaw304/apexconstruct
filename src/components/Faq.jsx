@@ -88,7 +88,7 @@ export default function Faq() {
 
                 <div className="support-links">
                   <span>
-                    <Mail size={16} /> info@apexconstruct.com
+                    <Mail size={16} /> leroysmith@apexconstruct.com
                   </span>
                   <span>
                     <Phone size={16} /> +1 856 273 8910

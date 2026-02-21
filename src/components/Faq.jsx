@@ -91,7 +91,7 @@ export default function Faq() {
                     <Mail size={16} /> leroysmith@apexconstruct.com
                   </span>
                   <span>
-                    <Phone size={16} /> +1 856 273 8910
+                    <Phone size={16} /> +1 915 294 9278
                   </span>
                 </div>
               </div>

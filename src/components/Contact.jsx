@@ -167,7 +167,7 @@ export default function Contact() {
 
             <div className="info-block">
               <strong>Phone</strong>
-              <p>+1 (212) 555-7824</p>
+              <p>+1 (915) 294 9278</p>
             </div>
 
             <div className="info-block">

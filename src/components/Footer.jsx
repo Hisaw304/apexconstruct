@@ -116,7 +116,7 @@ export default function Footer() {
 
             <div className="mt-6 space-y-3 text-sm text-gray-300">
               <div className="flex items-center gap-3">
-                <Phone size={16} /> <span>(555) 123-4567</span>
+                <Phone size={16} /> <span>+1 (915) 294 9278</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} /> <span>leroysmith@apexconstruct.com</span>

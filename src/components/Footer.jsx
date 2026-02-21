@@ -123,7 +123,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin size={16} />{" "}
-                <span>1450 Hudson New York, NY 10001 United States</span>
+                <span>275 Summer Street Boston, MA 02210 United States</span>
               </div>
             </div>
           </div>

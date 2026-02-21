@@ -158,9 +158,9 @@ export default function Contact() {
             <h3>Apexconstruct</h3>
 
             <p>
-              1450 Hudson Construction Ave
+              275 Summer Street
               <br />
-              New York, NY 10001
+              Boston, MA 02210
               <br />
               United States
             </p>
@@ -183,19 +183,20 @@ export default function Contact() {
 
             <div className="info-block">
               <strong>Licensed & Insured</strong>
-              <p>New York State Contractor License #NYC-48291</p>
+              <p>Massachusetts Contractor License #MA-48291</p>
             </div>
           </div>
         </div>
         {/* MAP */}
         <div className="contact-map">
           <MapContainer
-            center={[40.7128, -74.006]}
+            center={[42.3532, -71.0515]}
             zoom={13}
             style={{ height: "300px", width: "100%" }}
           >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[40.7128, -74.006]}>
+
+            <Marker position={[42.3532, -71.0515]}>
               <Popup>Apexconstruct HQ</Popup>
             </Marker>
           </MapContainer>

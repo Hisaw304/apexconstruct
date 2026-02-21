@@ -38,14 +38,14 @@ const ContactPage = () => {
             {/* CONTACT DETAILS */}
             <div className="services-intro-actions">
               <a href="tel:+12125557824" className="services-intro-btn">
-                +1 (212) 555-7824
+                +1 (915) 294 9278
               </a>
 
               <a
                 href="mailto:info@apexconstruct.com"
                 className="services-scroll-link"
               >
-                info@apexconstruct.com
+                leroysmith@apexconstruct.com
               </a>
             </div>
           </div>

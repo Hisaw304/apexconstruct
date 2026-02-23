@@ -167,7 +167,11 @@ export default function Contact() {
 
             <div className="info-block">
               <strong>Phone</strong>
-              <p>+1 (915) 294 9278</p>
+              <p>
+                +1 (915) 294 9278
+                <br />
+                +1 (612) 709 3814
+              </p>
             </div>
 
             <div className="info-block">

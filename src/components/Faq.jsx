@@ -92,6 +92,8 @@ export default function Faq() {
                   </span>
                   <span>
                     <Phone size={16} /> +1 915 294 9278
+                    <br />
+                    +1 612 709 3814
                   </span>
                 </div>
               </div>

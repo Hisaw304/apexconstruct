@@ -120,7 +120,7 @@ export default function Footer() {
                 <span>
                   +1 (915) 294 9278
                   <br />
-                  +1 (612) 709 3814
+                  +1 (302) 568 1812
                 </span>
               </div>
               <div className="flex items-center gap-3">
